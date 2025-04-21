@@ -1,0 +1,128 @@
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(8, 0, 35, 0.8));
+    background-position: center;
+    background-size: cover;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding: 0 20px;
+    /* Adds padding for smaller screens */
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-text {
+    animation: fadeInOut 1.4s;
+    margin-top: 20px;
+    padding: 0 10px;
+    /* Additional padding for small screens */
+}
+
+.hero-text h1 {
+    font-size: 4vw;
+    /* Responsive font size */
+    font-weight: 800;
+    margin-bottom: 20px;
+    max-width: 1200px;
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    /* Scales for smaller screens */
+    max-width: 1200px;
+    margin-bottom: 33px;
+    line-height: 1.7;
+}
+
+.hero-text button {
+    font-size: 2.5rem;
+    /* Adjusts for better readability on smaller screens */
+    font-weight: bold;
+    padding: 16px 32px;
+    /* Adjust padding for smaller screens */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.hero-text button img {
+    width: 20px;
+    /* Scales image for smaller buttons */
+    margin-left: 10px;
+}
+
+.hero-text button:hover {
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.5);
+    background-color: black;
+    color: white;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 7vw;
+        padding: 10px 30px;
+        /* Adjusts font size for tablets */
+    }
+
+    .hero-text p {
+        font-size: 1.2rem;
+        line-height: 1.7;
+        /* Smaller font for descriptions */
+    }
+
+    .hero-text button {
+        font-size: 1.5rem;
+        padding: 20px 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 7vw;
+        /* Further adjusts font size for mobile */
+    }
+
+    .hero-text p {
+        font-size: 0.9rem;
+        /* Smaller font for better fit */
+    }
+
+    .hero-text button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .hero-text button img {
+        width: 18px;
+        /* Adjusts arrow size for mobile */
+    }
+}

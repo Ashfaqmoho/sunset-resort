@@ -1,0 +1,93 @@
+.reviews {
+    position: relative;
+    margin: 80px auto;
+    padding: 0px 80px 20px 80px;
+}
+
+.next-btn,
+.back-btn {
+    position: absolute;
+    background: #212EA0;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    padding: 15px;
+    width: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.back-btn {
+    left: 0;
+    right: auto;
+}
+
+.slider {
+    overflow: hidden;
+}
+
+.slider ul {
+    display: flex;
+    width: 200%;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.slider ul li {
+    list-style: none;
+    width: 50%;
+    padding: 20px;
+}
+
+.slide {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    color: #676767;
+    line-height: 1.3;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 15px;
+}
+
+.user-info p {
+    font-size: 30px;
+    text-align: right;
+    margin-top: -10px;
+}
+
+.user-info img {
+    width: 100px;
+    border-radius: 100%;
+    border: 3px solid blue;
+    margin-left: 20px;
+}
+
+.user-info h3 {
+    color: #212EA0;
+    margin-bottom: -2px;
+}
+
+.user-info span {
+    color: #676767ab;
+    font-size: 20px;
+}
+
+p {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+
+/* Medium Screens (Below 1200px) */
+@media (max-width: 1200px) {
+    .reviews {
+        display: none;
+    }
+
+}

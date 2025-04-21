@@ -1,0 +1,84 @@
+.offers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Centers the content */
+    width: 90%;
+    margin: 20px auto;
+    flex-wrap: wrap;
+    /* Allows content to stack on smaller screens */
+    gap: 30px;
+    position: relative;
+}
+
+.offer {
+    margin: 0px auto 80px auto;
+    flex-basis: 100%;
+    /* Ensures the main offer image spans full width on smaller screens */
+    position: relative;
+}
+
+.offer img {
+    width: 100%;
+    /* Ensures the image adjusts to the container width */
+    max-width: 70vw;
+    /* Restricts the image size on larger screens */
+    height: auto;
+    /* Maintains aspect ratio */
+    object-fit: cover;
+    border: none;
+    border-radius: 35px;
+}
+
+.offer1,
+.offer2 {
+    position: absolute;
+    z-index: 2;
+}
+
+.offer1 img {
+    width: 200px;
+}
+
+
+.offer1 {
+    top: 0px;
+    left: -150px;
+
+}
+
+
+
+/* Medium Screens */
+@media (max-width: 1200px) {
+    .offer1 img {
+        width: 100px;
+    }
+
+    .offer1 {
+        left: -50px;
+    }
+
+}
+
+/* Small Screens */
+@media (max-width: 768px) {
+    .offers {
+        flex-direction: column;
+    }
+
+    .offer img {
+        max-width: 100%;
+    }
+
+    .offer1 img,
+    .offer2 img {
+        width: 100px;
+    }
+
+    .offer1 {
+        left: -50px;
+        top: -60px;
+        rotate: 60deg;
+    }
+}

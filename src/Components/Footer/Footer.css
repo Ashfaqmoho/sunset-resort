@@ -1,0 +1,143 @@
+.footer {
+    background-color: #44578978;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70vh;
+    padding: 10px 100px;
+    border-radius: 40px 40px 0 0;
+    opacity: 0.5;
+    scale: 1.05;
+    transform: translateY(400px);
+    transition: scale 0.5s ease, opacity 1.2s ease, transform 1.2s ease;
+    overflow-x: hidden;
+}
+
+.footer.visible {
+    opacity: 1;
+    scale: 1;
+    transform: translateY(0);
+}
+
+.left-footer {
+    flex-basis: 45%;
+    padding-left: 30px;
+}
+
+.left-footer h3 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.left-footer h3 img {
+    width: 70px;
+    margin-left: 10px;
+}
+
+.left-footer ul {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    list-style-type: none;
+    gap: 10px;
+}
+
+.left-footer ul li {
+    padding: 0;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.left-footer ul li img {
+    width: 30px;
+    margin-right: 20px;
+}
+
+.left-footer p {
+    font-size: 22px;
+    max-width: 80%;
+    color: #3b3b3b;
+    margin-bottom: 20px;
+}
+
+/* Right Footer */
+.right-footer {
+    flex-basis: 48%;
+}
+
+.right-footer .btn {
+    background-color: blue;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 20px;
+}
+
+.right-footer input,
+.right-footer textarea {
+    display: block;
+    width: 100%;
+    font-size: 22px;
+    background: #EBECFE;
+    padding: 15px;
+    margin: 5px 0 15px 0;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+}
+
+.right-footer span {
+    font-size: 22px;
+    margin-left: 10px;
+    display: block;
+}
+
+/* Responsive Design - Smaller Screens */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        padding: 20px;
+        height: auto;
+        margin-bottom: 0;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        /* Ensure no horizontal scroll */
+    }
+
+
+    .left-footer h3 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .left-footer h3 img {
+        width: 40px;
+    }
+
+    /* Hide Paragraph in Left Footer */
+    .left-footer p {
+        display: none;
+    }
+
+    /* Adjust the unordered list */
+
+
+    .left-footer ul li {
+        font-size: 18px;
+        justify-content: center;
+    }
+
+    /* Right Footer Input and Button Adjustments */
+    .right-footer input,
+    .right-footer textarea {
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    .right-footer .btn {
+        width: 100%;
+        padding: 15px;
+    }
+}

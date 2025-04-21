@@ -1,0 +1,115 @@
+.programs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 90px auto;
+    opacity: 0.3;
+    transform: translateX(400px);
+    transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.programs.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.program {
+    flex-basis: 30%;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+/* Fix image sizing */
+.program img {
+    width: 100%;
+    height: auto;
+    /* Ensure images don't overflow the container */
+    object-fit: cover;
+    max-height: 60vh;
+    /* Added max-height to prevent overflow */
+    border: none;
+    border-radius: 30px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+.caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity 0.4s;
+}
+
+.program:hover .caption {
+    opacity: 1;
+}
+
+.caption img {
+    width: 80px;
+    height: 80px;
+}
+
+.caption p {
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 15px;
+}
+
+/* Responsive Adjustments for Medium Screens */
+@media (max-width: 1200px) {
+    .program {
+        flex-basis: 45%;
+        /* Programs take 45% of width on medium screens */
+    }
+
+    .program img {
+        height: auto;
+        /* Allow image height to adjust according to its aspect ratio */
+    }
+}
+
+/* Responsive Adjustments for Small Screens */
+@media (max-width: 768px) {
+    .programs {
+        transform: translateX(0);
+    }
+
+    .program {
+        flex-basis: 100%;
+        /* Programs stack vertically on smaller screens */
+        margin-bottom: 20px;
+        /* Reduce space between stacked programs */
+    }
+
+    .program img {
+        height: auto;
+        /* Let the image scale with its natural height/width ratio */
+        max-height: 45vh;
+        /* Ensures images stay within the container's size */
+    }
+
+    .caption img {
+        width: 60px;
+        /* Adjust icon size for smaller screens */
+        height: 60px;
+    }
+
+    .caption p {
+        font-size: 18px;
+        /* Reduce text size for smaller screens */
+        margin-top: 10px;
+        /* Adjust margin */
+    }
+}
